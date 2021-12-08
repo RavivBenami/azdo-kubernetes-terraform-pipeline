@@ -16,8 +16,8 @@ stages:
     steps: 
     - bash: echo build FirstJob
   - job: SecondJob 
-  steps:
-  - bash: echo Build SecondJob
+    steps:
+    - bash: echo Build SecondJob
 - stage: DevDeploy
   jobs:
   - job: DevDeployJob
@@ -28,12 +28,3 @@ stages:
   - job: QADeployJob
     steps:
     - bash: echo QADeployJob
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
